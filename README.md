@@ -1,7 +1,7 @@
 # 🐧 Clustering Penguins Dataset – DBSCAN & KMeans
-Machine learning project for unsupervised clustering and feature selection on the Palmer Penguins dataset.
-Uses standardized KMeans and DBSCAN algorithms to identify natural groupings of samples based on biological features.
-Includes grid search optimization (silhouette-based) for DBSCAN parameters and wrapper-based feature selection.
+Machine learning project for unsupervised clustering and feature selection on the Palmer Penguins dataset.\
+Uses standardized KMeans and DBSCAN algorithms to identify natural groupings of samples based on biological features.\
+Includes grid search optimization (silhouette-based) for DBSCAN parameters and wrapper-based feature selection.\
 
 ✨ Features:
   - Data cleaning, outlier removal, and KNN-based imputation
