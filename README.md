@@ -33,7 +33,8 @@ The dataset contains physical measurements of penguins
 
 ### Data Quality
 
-  - Two rows with completely missing values were removed.
+  - Two rows with completely missing values were removed (`id=3` and `id=339`).
+
   | id | culmen_length_mm | culmen_depth_mm | flipper_length_mm | body_mass_g | sex |
   |:--:|:----------------:|:---------------:|:-----------------:|:-----------:|:---:|
   | 3 | NaN | NaN | NaN | NaN | NaN |
@@ -45,13 +46,18 @@ The dataset contains physical measurements of penguins
   | 286 | 46.2 | 14.4 | 214.0 | 4650.0 | NaN |
   | 324 | 47.3 | 13.8 | 216.0 | 4725.0 | NaN |
   | 339 | NaN | NaN | NaN | NaN | NaN |
+  
   - One flipper length was negative, and one exceeded 500mm → both were removed.
+
+  | id | culmen_length_mm | culmen_depth_mm | flipper_length_mm | body_mass_g | sex |
+  |:--:|:----------------:|:---------------:|:-----------------:|:-----------:|:---:|
+  | 14 | 34.6 | 21.1 | -132.0 | 4400.0 | MALE |
 
   - The column `sex` contained values ".", which were replaced with `NaN`, and then encoded: `MALE` = 1, `FEMALE` = 0.
 
 ### Missing Values
 
-  - Missing values were imputed using **KNNImputer** with `n_neighbors=5`.
+  - Missing values (`id=8`, `id=10`, `id=11`, `id=47`, `id=246`, `id=286`, `id=324`) were imputed using **KNNImputer** with `n_neighbors=5`.
 
   - The dataset was standardized using **StandardScaler** before clustering.
 
