@@ -58,9 +58,122 @@ The dataset contains physical measurements of penguins
 ### Missing Values
 
   - Missing values (`id=8`, `id=10`, `id=11`, `id=47`, `id=246`, `id=286`, `id=324`) were imputed using **KNNImputer** with `n_neighbors=5`.
-
   - The dataset was standardized using **StandardScaler** before clustering.
 
 ### Outlier Detection
 
   - Boxplots showed extreme outliers in `flipper_length_mm` which were removed.
+
+## tu ma być obrazek
+
+---
+
+## 🔍 Clustering Algorithms
+
+### KMeans Clustering
+
+  - The elbow method was used to determine the optimal number of clusters (`k = 4`).
+## tu ma być obrazek
+  - PCA was applied to visualize the clusters in 2D.
+## tu ma być obrazek
+
+### DBSCAN Clustering
+
+  - Hyperparameters (`eps`, `min_samples`) were optimized using **own algoritm** with a custom silhouette scoring function.
+  - DBSCAN was able to find meaningful groupings including noise points. PCA was used to visualize the clusters in 2D.
+## tu ma być obrazek
+
+---
+
+## 🔍 Feature Selection
+
+### Wrapper-Based Selection
+
+  - Subsets of features were evaluated using DBSCAN with fixed parameters (`eps=1.086`, `min_samples=5`).
+  - Silhouette score was used to evaluate each subset.
+  - The best performing combination was selected and used for final clustering.
+
+---
+
+## ✅ Results summary
+
+  Internal metrics used:
+  - Silhouette Score
+  - Davies-Bouldin Index
+  - Calinski-Harabasz Index
+
+  Each clustering result was visualized using:
+  - PCA 2D scatter plots
+  - Subplots of feature pairs
+
+---
+
+## 📂 Repository structure
+
+penguins-clustering\
+│── data\
+│   │── penguins.csv\
+│\
+│── docs\
+│   │── images\
+│   │   │──\
+│\
+│── src\
+│   ├── preprocessing.py\
+│   ├── clustering_kmeans.py\
+│   ├── clustering_dbscan.py\
+│   ├── feature_selection.py\
+│   │── evaluation.py\
+│\
+├── main.py\
+├── README.md\
+│── requirements.txt
+
+---
+
+## 🚀 Installation
+
+1. **Clone repository:**
+
+   ```bash
+   git clone https://github.com/t-piwowarski/penguin-clustering.git
+   cd text-generator
+   ```
+2. **Create and activate a virtual environment (optional but recommended):**
+   
+- On Windows:
+     
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+   
+- On Linux/macOS:
+     
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   
+3. **Install the required packages:**
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the main pipeline:**
+
+   ```bash
+   python main.py
+   ```
+
+   This will:
+
+  - Load and clean the data
+  - Impute and scale features
+  - Run KMeans and DBSCAN
+  - Optimize DBSCAN parameters via GridSearchCV
+  - Perform wrapper-based feature selection
+  - Evaluate and visualize the results
+
+---
