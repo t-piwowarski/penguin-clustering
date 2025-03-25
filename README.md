@@ -169,11 +169,9 @@ penguins-clustering\
 
    This will:
 
-  - Load and clean the data
-  - Impute and scale features
-  - Run KMeans and DBSCAN
-  - Optimize DBSCAN parameters via GridSearchCV
-  - Perform wrapper-based feature selection
-  - Evaluate and visualize the results
-
----
+    - Load and clean the data
+    - Impute and scale features
+    - Run KMeans and DBSCAN
+    - Optimize DBSCAN parameters via GridSearchCV
+    - Perform wrapper-based feature selection
+    - Evaluate and visualize the results
