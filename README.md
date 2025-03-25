@@ -119,14 +119,14 @@ penguins-clustering\
 │   │   │──\
 │\
 │── src\
-│   ├── preprocessing.py\
-│   ├── clustering_kmeans.py\
-│   ├── clustering_dbscan.py\
-│   ├── feature_selection.py\
+│   │── preprocessing.py\
+│   │── clustering_kmeans.py\
+│   │── clustering_dbscan.py\
+│   │── feature_selection.py\
 │   │── evaluation.py\
 │\
-├── main.py\
-├── README.md\
+│── main.py\
+│── README.md\
 │── requirements.txt
 
 ---
