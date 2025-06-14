@@ -117,7 +117,11 @@ penguins-clustering\
 │\
 │── docs\
 │   │── images\
-│   │   │──\
+│   │   │── DBSCAN_PCA.png\
+│   │   │── DBSCAN_Wrapper-Based.png\
+│   │   │── boxplots.png\
+│   │   │── elbow_plots.png\
+│   │   │── kmeans_PCA.png\
 │\
 │── src\
 │   │── preprocessing.py\
