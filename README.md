@@ -64,7 +64,7 @@ The dataset contains physical measurements of penguins
 
   - Boxplots showed extreme outliers in `flipper_length_mm` which were removed.
 
-## tu ma być obrazek
+  <img src="docs/images/boxplots.png" width="500">
 
 ---
 
@@ -73,15 +73,15 @@ The dataset contains physical measurements of penguins
 ### KMeans Clustering
 
   - The elbow method was used to determine the optimal number of clusters (`k = 4`).
-## tu ma być obrazek
+  <img src="docs/images/elbow_plot.png" width="500">
   - PCA was applied to visualize the clusters in 2D.
-## tu ma być obrazek
+  <img src="docs/images/kmeans_PCA.png" width="500">
 
 ### DBSCAN Clustering
 
   - Hyperparameters (`eps`, `min_samples`) were optimized using **own algoritm** with a custom silhouette scoring function.
   - DBSCAN was able to find meaningful groupings including noise points. PCA was used to visualize the clusters in 2D.
-## tu ma być obrazek
+  <img src="docs/images/DBSCAN_PCA.png" width="500">
 
 ---
 
@@ -92,6 +92,7 @@ The dataset contains physical measurements of penguins
   - Subsets of features were evaluated using DBSCAN with fixed parameters (`eps=1.086`, `min_samples=5`).
   - Silhouette score was used to evaluate each subset.
   - The best performing combination was selected and used for final clustering.
+  <img src="docs/images/DBSCAN_Wrapper-Based.png" width="500">
 
 ---
 
